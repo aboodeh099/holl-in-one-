@@ -1,0 +1,576 @@
+/* التنسيق العام للصفحة */
+body {
+    font-family: Arial, sans-serif; /* خط الصفحة */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    padding: 0; /* إزالة الحشو الافتراضية */
+    text-align: center; /* محاذاة النص في المنتصف */
+    background-color: #f4f4f4; /* لون خلفية الصفحة */
+}
+
+/* تنسيق الهيدر (القسم العلوي) */
+header {
+    background-color: #8c9179; /* لون خلفية الهيدر */
+    color: #aee48a; /* لون النص في الهيدر */
+    padding: 10px 20px; /* حشو داخلي للهيدر */
+    display: flex; /* استخدام Flexbox لتنسيق العناصر */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    justify-content: space-between; /* توزيع العناصر أفقياً مع مسافة بينها */
+}
+
+/* تنسيق الشعار */
+.logo {
+    height: 50px; /* ارتفاع الشعار */
+}
+
+/* تنسيق قائمة التنقل (الناف بار) */
+nav ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0; /* إزالة الحشو الداخلي */
+    margin: 0; /* إزالة الهوامش الخارجية */
+    display: flex; /* استخدام Flexbox لتنسيق العناصر */
+}
+
+nav ul li {
+    margin: 0 15px; /* المسافة بين عناصر القائمة */
+}
+
+nav ul li a {
+    color: #fff; /* لون النص في الروابط */
+    text-decoration: none; /* إزالة الخطوط من تحت الروابط */
+    font-weight: bold; /* جعل النص عريضًا */
+    padding: 5px 10px; /* حشو داخلي للروابط */
+    transition: color 0.3s ease; /* تأثير تغيير اللون عند التحديد */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* تغيير لون النص عند التحديد */
+}
+
+/* تنسيق القسم الرئيسي (Hero Section) */
+.hero {
+    background-image: url('img/1.png'); /* صورة الخلفية */
+    background-size: cover; /* تغطية الخلفية بالكامل */
+    background-position: center; /* محاذاة الخلفية في المنتصف */
+    color: #ffffff; /* لون النص في القسم الرئيسي */
+    padding: 100px 20px; /* حشو داخلي للقسم */
+}
+
+.hero-content h1 {
+    font-size: 3em; /* حجم النص للعنوان الرئيسي */
+    margin: 0; /* إزالة الهوامش */
+}
+
+.hero-content p {
+    font-size: 1.5em; /* حجم النص للفقرة */
+}
+
+/* تنسيق الأزرار (Buttons) */
+.about {
+    display: flex; /* استخدام Flexbox لتنسيق الأزرار */
+    flex-direction: column; /* ترتيب الأزرار بشكل عمودي */
+    align-items: center; /* محاذاة الأزرار في المنتصف */
+    margin: -10px 0; /* هوامش خارجية للقسم */
+    padding-left: 60px; /* حشو داخلي من اليسار */
+}
+
+.about button {
+    margin: 10px 0; /* المسافة بين الأزرار */
+    padding: 20px 90px; /* حشو داخلي للأزرار */
+    font-size: 1em; /* حجم النص داخل الأزرار */
+    background-color: #333; /* لون خلفية الأزرار */
+    color: #fff; /* لون النص داخل الأزرار */
+    border: none; /* إزالة الإطار */
+    border-radius: 5px; /* زوايا مدورة للأزرار */
+    cursor: pointer; /* تغيير شكل المؤشر إلى يد */
+    transition: background-color 0.3s ease, color 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.about button:hover {
+    background-color: #ffcc00; /* تغيير لون الخلفية عند التحديد */
+    color: #333; /* تغيير لون النص عند التحديد */
+}
+
+/* تنسيق قسم البطاقات */
+.cards {
+    display: flex;
+    justify-content: center; /* توسيط البطاقات أفقياً */
+    align-items: center; /* توسيط البطاقات عمودياً */
+    height: 100vh; /* جعل القسم يأخذ ارتفاع الشاشة بالكامل */
+    padding: 20px;
+}
+
+/* تنسيق البطاقة */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* تحريك البطاقة لأعلى */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* التأكد من أن الصورة تملأ المساحة دون تشويه */
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 20px;
+}
+
+/* تنسيق الروابط داخل البطاقة */
+.card a {
+    text-decoration: none; /* إزالة الخط التحتي */
+    color: inherit; /* استخدام لون النص الافتراضي */
+}
+/* تنسيق التذييل (Footer) */
+footer {
+    background-color: #333; /* لون خلفية التذييل */
+    color: #e2a049; /* لون النص في التذييل */
+    padding: 10px 0; /* حشو داخلي للتذييل */
+    margin-top: 20px; /* هامش علوي للتذييل */
+}
+
+/* تنسيقات إضافية لصفحة الخدمات */
+.services {
+    padding: 20px;
+}
+
+.services h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.services .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services .icon {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services .icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.services .icon p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* تنسيقات إضافية لصفحة الحجز */
+        
+.booking {
+    padding: 20px;
+}
+
+.booking h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.booking form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.booking form label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.booking form input,
+.booking form select,
+.booking form textarea {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.booking form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.booking form button:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+/* تنسيقات إضافية لصفحة التواصل */
+.contact {
+    padding: 20px;
+}
+
+.contact h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact form label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #ffcc00;
+    color: #333;
+}/* تنسيق الفوتر */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.contact-info, .social-media {
+    text-align: right;
+    margin: 10px;
+}
+
+.contact-info h3, .social-media h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    margin: 10px 0;
+}
+
+.social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.social-media ul li a:hover {
+    color: #3498db;
+}
+
+/* أيقونات Font Awesome */
+.fab, .fas {
+    margin-left: 10px;
+}
+/* تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif; /* نوع الخط العام للصفحة */
+    background-color: #f4f4f4; /* لون خلفية الصفحة */
+    color: #333; /* لون النص العام */
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    padding: 0; /* إزالة الحشو الافتراضي */
+    text-align: right; /* محاذاة النص إلى اليمين (للواجهات العربية) */
+}
+
+/* تنسيق الهيدر (الجزء العلوي من الصفحة) */
+header {
+    background-color: #2c3e50; /* لون خلفية الهيدر */
+    padding: 10px 20px; /* حشو داخلي للهيدر (10px أعلى/أسفل، 20px يمين/يسار) */
+    display: flex; /* استخدام Flexbox لتنسيق العناصر داخله */
+    justify-content: space-between; /* توزيع العناصر بين بداية ونهاية الهيدر */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+}
+
+/* تنسيق الشعار داخل الهيدر */
+header .logo {
+    height: 50px; /* ارتفاع الشعار */
+}
+
+/* تنسيق قائمة التنقل (navbar) */
+nav ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    margin: 0; /* إزالة الهوامش */
+    padding: 0; /* إزالة الحشو */
+    display: flex; /* استخدام Flexbox لتنسيق العناصر */
+}
+
+/* تنسيق عناصر القائمة */
+nav ul li {
+    margin-left: 20px; /* المسافة بين عناصر القائمة */
+}
+
+/* تنسيق روابط القائمة */
+nav ul li a {
+    color: #fff; /* لون النص الأبيض */
+    text-decoration: none; /* إزالة الخط التحتي من الروابط */
+    font-size: 1rem; /* حجم الخط */
+}
+
+/* تأثير التحويم (hover) على روابط القائمة */
+nav ul li a:hover {
+    color: #3498db; /* تغيير لون النص إلى الأزرق عند التحويم */
+}
+
+/* تنسيق قسم الخدمات */
+.service-detail {
+    text-align: center; /* محاذاة النص إلى الوسط */
+    padding: 20px; /* حشو داخلي للقسم */
+}
+
+/* تنسيق الصور داخل قسم الخدمات */
+.service-detail img {
+    width: 450px; /* عرض الصورة */
+    height: 450px; /* ارتفاع الصورة */
+    margin-bottom: 40px; /* مسافة أسفل الصورة */
+}
+
+/* تنسيق النص داخل قسم الخدمات */
+.service-detail p {
+    font-size: 1.1rem; /* حجم الخط */
+    line-height: 1.6; /* ارتفاع السطر */
+    max-width: 600px; /* أقصى عرض للنص */
+    margin: 0 auto; /* توسيط النص أفقيًا */
+}
+
+/* تنسيق الفوتر (الجزء السفلي من الصفحة) */
+footer {
+    background-color: #2c3e50; /* لون خلفية الفوتر */
+    color: #fff; /* لون النص الأبيض */
+    text-align: center; /* محاذاة النص إلى الوسط */
+    padding: 10px; /* حشو داخلي للفوتر */
+    margin-top: 20px; /* مسافة أعلى الفوتر */
+}
+/* تنسيق قسم العروض */
+.offers {
+    padding: 20px;
+    text-align: center;
+}
+
+.offer-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: right;
+}
+
+.offer-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.offer-card ul {
+    list-style-type: disc;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.offer-card ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.offer-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.offer-card button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.offer-card button:hover {
+    background-color: #2980b9;
+}
+/* تنسيق أزرار "احجز الآن" */
+.book-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #2980b9; /* تغيير لون الخلفية عند التحويم */
+    transform: translateY(-3px); /* تحريك الزر لأعلى قليلاً */
+}
+
+.book-button:active {
+    transform: translateY(0); /* إعادة الزر إلى مكانه عند النقر */
+}
+/* تنسيق قسم المنتجات */
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    text-align: right;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* تحريك البطاقة لأعلى */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* التأكد من أن الصورة تملأ المساحة دون تشويه */
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 20px;
+}
+
+/* تنسيق أزرار المنتجات */
+.product-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: #2980b9; /* تغيير لون الخلفية عند التحويم */
+    transform: translateY(-3px); /* تحريك الزر لأعلى قليلاً */
+}
+
+.product-button:active {
+    transform: translateY(0); /* إعادة الزر إلى مكانه عند النقر */
+}
+/* تنسيق محتوى الهيدر */
+.header-content {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    justify-content: center; /* توسيط العناصر عمودياً */
+    align-items: center; /* توسيط العناصر أفقياً */
+    height: 25vh; /* جعل القسم يأخذ ارتفاع الشاشة بالكامل */
+    text-align: center; /* محاذاة النص إلى الوسط */
+}
+
+/* تنسيق العنوان */
+.header-content h1 {
+    font-size: 3rem; /* حجم الخط */
+    color: #ffffff; /* لون النص */
+    margin-bottom: 10px; /* مسافة أسفل العنوان */
+}
+
+/* تنسيق الفقرة */
+.header-content p {
+    font-size: 1.5rem; /* حجم الخط */
+    color: #ffffff; /* لون النص */
+}
